@@ -21,13 +21,14 @@ CREATE TABLE public.city (
 );
 
 CREATE TABLE public.customers (
-    customer_id varchar(255) PRIMARY KEY,
-    first_name varchar(128) NOT NULL,
-    last_name varchar(128) NOT NULL,
-    customer_city varchar NOT NULL REFERENCES public.city(city_id),
-    country_name varchar(128) NOT NULL,
-    cpf int NOT NULL
+	customer_id varchar(255) NOT NULL,
+	first_name varchar(128) NOT NULL,
+	last_name varchar(128) NOT NULL,
+	customer_city varchar NOT NULL,
+	country_name varchar(128) NOT NULL,
+	cpf int8 NOT NULL
 );
+
 
 CREATE TABLE public.accounts (
     account_id varchar(255) PRIMARY KEY,
